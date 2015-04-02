@@ -55,8 +55,8 @@
 	</bean>
 	
 	<!-- establece el idioma por defecto -->
-	<bean id="localResolver"
-		class="org.springframework.web.servlet.i18n.CookieLocaleResolver">
+	<bean id="localeResolver"
+		class="org.springframework.web.servlet.i18n.SessionLocaleResolver">
 		<property name="defaultLocale" value="es" />
 	</bean>
 	
