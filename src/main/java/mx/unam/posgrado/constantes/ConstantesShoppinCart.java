@@ -19,30 +19,8 @@ public interface ConstantesShoppinCart {
     /** Formato para fechas **/
     static String FORMATO_FECHA = "dd 'de' MMMM 'de' yyyy";
     static String FORMATO_HORA= "HH:mm:ss";
-    /** Acciones para el control **/
-    static String ACCION_AGREGAR="add";
-    static String ACCION_CLEAR="clear";
-    static String ACCION_ACTUALIZAR="update";
-    static String ACCION_CHECKOUT="checkout";
-    static String ACCION_CANCELAR="cancelar";
-    static String ACCION_COMPRAR="compra";
-    static String ACCION_REINICIAR="reiniciar";
-    /**Nombre de Paginas **/
-    static String PREFIX="/pages/";
-    static String EXTENSION=".jsp";
-    static String PAGINA_LISTADO=PREFIX+"listado"+EXTENSION;
-    static String PAGINA_CHECKOUT=PREFIX+"checkout"+EXTENSION;
-    static String PAGINA_COMPRA=PREFIX+"compra"+EXTENSION;
-    /**Nombre de parametros**/
-    static String PARAMETRO_OPERACION="operacion";
-    static String PARAMETRO_PRODUCTO_SELECCIONADO="cantidad";
-    static String PARAMETRO_PRODUCTO_BORRADO="articuloborrado";
-    static String PARAMETRO_ERROR_CHECKOUT_VACIO="mensajeError";
-    
-    static String PARAMETRO_TARJETA_CREDITO="tarjetaCredito";
-    static String PARAMETRO_NIP_CREDITO="nipCredito";
-    static String PARAMETRO_CODIGO_TRANSACCION="codigoTransaccion";
-    static String PARAMETRO_EMPRESA_ENVIO="empresaEnvioId";
+  
+  
 
     
     /** Atributos de sesion **/
@@ -54,13 +32,8 @@ public interface ConstantesShoppinCart {
 
     /** Atributos de request **/
     static String REQUEST_CONTENEDOR_ARTICULOS_ELEGIDOS="articuloElegidoContainer";
-
     
-    /**Nombre de las vistas**/
-    static String VISTA_CATALOGO_PRODUCTO="catalogo";
-    static String VISTA_CHECKOUT_PRODUCTO="checkout";
-    static String VISTA_COMPRA_PRODUCTO="compra";
-
+    /** Atributos de sesion **/
     static String SESION_LISTA_PRODUCTOS_SELECCIONADOS="purchases";
     static String SESION_LISTA_CATALOGO_PRODUCTOS="articulos";
     static String SESION_LISTA_CATALOGO_PAQUETERIA="empresaEnvioList";
@@ -68,12 +41,31 @@ public interface ConstantesShoppinCart {
     static String SESION_IMPUESTO_CALCULADO="impuesto";
     static String SESION_COMPRA_TOTAL_CALCULADA="totalPurchase";
     static String SESION_COMPRA_TOTAL_CON_IMPUESTOS="totalPurchaseImpuesto";
+    
+    /**Nombre de las vistas TILES**/
+    static String VISTA_CATALOGO_PRODUCTO="catalogo";
+    static String VISTA_CHECKOUT_PRODUCTO="checkout";
+    static String VISTA_COMPRA_PRODUCTO="compra";
+   /** nombres de pagina html **/
+    static String INDICADOR_REDIRECCION="redirect:";
+    static String INDICADOR_FORWARD="forward:/";
+    
+    static String PAGINA_HTML_DE_COMPRAS="decompras.html";
+    static String PAGINA_HTML_VERIFICA_CHECKOUT="verificaCheckout.html";
+    static String PAGINA_HTML_CHECKOUT="checkout.html";
+    static String PAGINA_HTML_REINICIO_COMPRA="reiniciar.html";
+
+    static String PAGINA_HTML_REINICIO_PRINCIPAL="reiniciarInicio.html";
+    static String PAGINA_HTML_CONFIRMA_COMRA="confirmPurchase.html";
+    
+    /**Nombre de las peticiones **/
+    static String REQUEST_ADD_PRODUCTO="/addarticulo";
+    static String REQUEST_UPDATE_PRODUCTO="/updateCar";
+    static String REQUEST_CLEAR_PRODUCTO="/clear";
 
     
-    
-    
-    /**Mensajes de Error**/
-    static String MENSAJE_ERROR_CHECKOUT_VACIO="Error: Todos los campos son necesarios";
+ 
 
+    
     
 }

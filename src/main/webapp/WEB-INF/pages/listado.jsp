@@ -58,7 +58,7 @@
 		</a>
 	</div>
 	<div class="col-md-3">
-		<a href="/decompras/clear.html" class="btn btn-warning"
+		<a href="clear.html" class="btn btn-warning"
 			name="clear">
 			<spring:message code="articulo.boton.limpiar" /> 
  		</a>

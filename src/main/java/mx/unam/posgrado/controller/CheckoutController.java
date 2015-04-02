@@ -71,7 +71,7 @@ public class CheckoutController implements Serializable {
 	}
 	 
 	
-	@RequestMapping(value ="checkout.html",method = RequestMethod.GET )
+	@RequestMapping(value =PAGINA_HTML_CHECKOUT,method = RequestMethod.GET )
 	public ModelAndView showCheckout(@ModelAttribute(SESION_CONTENEDOR_COMPRA) CompraContainer compraContainer ) 
 	{
 		logger.debug("Entrando pagina principal de Checkout ");
@@ -79,7 +79,7 @@ public class CheckoutController implements Serializable {
 	}
 	
 	
-	@RequestMapping(value ="confirmPurchase.html",method = { RequestMethod.GET, RequestMethod.POST } )
+	@RequestMapping(value =PAGINA_HTML_CONFIRMA_COMRA,method = { RequestMethod.GET, RequestMethod.POST } )
 	public ModelAndView confirmPurchase(@Valid @ModelAttribute(SESION_CONTENEDOR_COMPRA)
 	CompraContainer compraContainer,BindingResult resultado) 
 	{
@@ -94,9 +94,9 @@ public class CheckoutController implements Serializable {
 		return new ModelAndView(VISTA_COMPRA_PRODUCTO,SESION_CONTENEDOR_COMPRA,compraContainer );
 	}
 	
-	@RequestMapping(value ="reiniciar.html",method = RequestMethod.GET )
+	@RequestMapping(value =PAGINA_HTML_REINICIO_COMPRA,method = RequestMethod.GET )
 	public String reiniciarCompra(SessionStatus status){
 		status.setComplete();
-		return "redirect:reiniciarInicio.html";
+		return INDICADOR_REDIRECCION + PAGINA_HTML_REINICIO_PRINCIPAL;
 	}
 }

@@ -86,7 +86,7 @@ public class ShoppingCartController implements Serializable {
 	        binder.setValidator(new ArticuloElegidoContainerValidator());
 	}
 
-	@RequestMapping(value ="decompras.html",method = RequestMethod.GET )
+	@RequestMapping(value =PAGINA_HTML_DE_COMPRAS,method = RequestMethod.GET )
 	public ModelAndView showCarroCompras() 
 	{
 		logger.debug("Entrando pagina principal ");
@@ -95,7 +95,7 @@ public class ShoppingCartController implements Serializable {
 	}
 	
 	
-	@RequestMapping( value ="/addarticulo", method = RequestMethod.POST )
+	@RequestMapping( value =REQUEST_ADD_PRODUCTO, method = RequestMethod.POST )
 	public String addPurchaseArticulo(
 			@ModelAttribute(SESION_CONTENEDOR_PURCHASE) 
 			PurchaseContainer purchaseContainer,
@@ -106,7 +106,7 @@ public class ShoppingCartController implements Serializable {
 		
 		
 		if(resultado.hasErrors()){
-			return "catalogo";
+			return VISTA_CATALOGO_PRODUCTO;
 		}
 		logger.debug("Entrando a agregar Articulo " + articuloElegidoContainer);
 		for(Purchase purchase:articuloElegidoContainer.getArticulosElegidosList())
@@ -127,28 +127,28 @@ public class ShoppingCartController implements Serializable {
 				}
 			}
 		}
-		return "redirect:decompras.html";
+		return INDICADOR_REDIRECCION + PAGINA_HTML_DE_COMPRAS;
 	}
 
 
 			
-	@RequestMapping( value ="verificaCheckout.html", method = RequestMethod.GET )
+	@RequestMapping( value =PAGINA_HTML_VERIFICA_CHECKOUT, method = RequestMethod.GET )
 	public String realizarCheckout(@ModelAttribute(SESION_CONTENEDOR_PURCHASE) PurchaseContainer purchaseContainer) {
 		logger.debug("Entrando a checkout " +purchaseContainer.getPurchaseArticuloList().size());
 		if(purchaseContainer.getPurchaseArticuloList().size()<=0){
-			return "redirect:decompras.html";
+			return INDICADOR_REDIRECCION + PAGINA_HTML_DE_COMPRAS;
 		}
-		return "forward:/checkout.html";
+		return INDICADOR_FORWARD + PAGINA_HTML_CHECKOUT;
 	}
 
-	@RequestMapping( value ="/clear", method = RequestMethod.GET )
+	@RequestMapping( value =REQUEST_CLEAR_PRODUCTO, method = RequestMethod.GET )
 	public String reiniciarCarro(@ModelAttribute(SESION_CONTENEDOR_PURCHASE) PurchaseContainer purchaseContainer) {
 		logger.debug("Entrando a clear");
 		purchaseContainer.getPurchaseArticuloList().clear();
-		return "redirect:decompras.html";
+		return INDICADOR_REDIRECCION + PAGINA_HTML_DE_COMPRAS;
 	}
 	
-	@RequestMapping( value ="/updateCar", method = RequestMethod.POST )
+	@RequestMapping( value =REQUEST_UPDATE_PRODUCTO, method = RequestMethod.POST )
 	public String actualizarCarro(
 			@ModelAttribute(REQUEST_CONTENEDOR_ARTICULOS_ELEGIDOS)
 			ArticuloElegidoContainer articuloElegidoContainer,
@@ -165,13 +165,13 @@ public class ShoppingCartController implements Serializable {
 
 			}
 		}
-		return "redirect:decompras.html";
+		return INDICADOR_REDIRECCION + PAGINA_HTML_DE_COMPRAS;
 	}
 	
-	@RequestMapping(value ="reiniciarInicio.html",method = RequestMethod.GET )
+	@RequestMapping(value =PAGINA_HTML_REINICIO_PRINCIPAL,method = RequestMethod.GET )
 	public String reiniciarCompra( @ModelAttribute(SESION_CONTENEDOR_PURCHASE) PurchaseContainer purchaseContainer, SessionStatus status){
 		logger.debug("Borrando a " + purchaseContainer);
 		status.setComplete();
-		return "redirect:decompras.html";
+		return INDICADOR_REDIRECCION + PAGINA_HTML_DE_COMPRAS;
 	}
 }

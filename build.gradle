@@ -77,9 +77,9 @@ eclipse {
     }
     component {
       //you can configure the context path:
-      contextPath = 'decomprasmvc'
+      contextPath = 'mvcdecompras'
       //you can configure the deployName:
-      deployName = 'decomprasmvc'
+      deployName = 'mvcdecompras'
       //you can add a wb-property elements; mandatory keys: 'name', 'value':
       //property name: 'moodOfTheDay', value: ':-D'
     }
