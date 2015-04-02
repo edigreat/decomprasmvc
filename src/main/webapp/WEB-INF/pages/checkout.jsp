@@ -8,6 +8,12 @@
 <%@page import="java.util.ArrayList,java.util.List,mx.unam.posgrado.beans.*"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
+<div class="panel panel-primary">
+	<div class="panel-heading">
+   	 	<h3 class="panel-title"><spring:message code="checkout.panel.header" /></h3>
+   	 </div>
+   <div class="panel-body">
+   
   <form:form method="post" action="confirmPurchase.html" modelAttribute="compraContainer" cssClass="form-horizontal" role="form">
   <div id="my-div" style="display:none;">
    <form:errors path="tarjetaCredito">
@@ -25,13 +31,6 @@
      	<c:set var="errorClassEmpresaEnvio" value="alert alert-danger"/>
    </form:errors>
 	</div>
-   
-
-          <div class="row">
-                <div class="page-header">
-                    <h1>Almacenes Deportivos   <small>Compra de Artículos</small></h1>
-                </div>
-            </div>
             <div class="row">
                 <div class="col-md-12">
                 <table class="table table-striped table-condensed">
@@ -169,4 +168,5 @@
            </div>
            </div>
               </form:form>
-          
+  </div> <!-- final de panel body -->
+</div><!-- panel panel-primary -->     

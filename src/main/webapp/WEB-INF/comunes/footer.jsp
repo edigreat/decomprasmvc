@@ -5,7 +5,7 @@
 <div class="col-md-4"></div>
 <div class="col-md-4">
 	<address>
-		<strong><spring:message code="compra.pagina.footer" /></strong><br>
+		<strong><spring:message code="catalogo.pagina.footer" /></strong><br>
 	</address>
 </div>
 <div class="col-md-4"></div>

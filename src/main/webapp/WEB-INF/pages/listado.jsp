@@ -8,7 +8,11 @@
 <%@page import="java.util.ArrayList,java.util.List,mx.unam.posgrado.beans.*"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
-
+<div class="panel panel-primary">
+	<div class="panel-heading">
+   	 	<h3 class="panel-title"><spring:message code="catalogo.panel.header" /></h3>
+   	 </div>
+   <div class="panel-body">
 	<form:form method="post" action="addarticulo.html" modelAttribute="articuloElegidoContainer">
 		<div class="row">
 			
@@ -123,4 +127,6 @@
 
 		</div>
 	</form:form>
+</div> <!-- final de panel body -->
+</div><!-- panel panel-primary -->
 

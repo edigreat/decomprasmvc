@@ -24,13 +24,16 @@
 	</definition>
 	
 		<definition name="checkout" extends="base.definition">
+		<put-attribute name="header" value="" />
 		<put-attribute name="title" value=".: Check Out :." />
 		<put-attribute name="body" value="/WEB-INF/pages/checkout.jsp" />
+		<put-attribute name="footer" value="" />
+		
 	</definition>
 	
 	<definition name="compra" extends="base.compra.definition">
 		<put-attribute name="title" value=".: Compra Realizada :." />
-		<put-attribute name="header" value=" GRACIAS POR TU COMPRA" />
+		<put-attribute name="header" value=" ALMACENES DEPORITVOS. COMPROBANTE DE COMPRA" />
 		
 		<put-attribute name="body" value="/WEB-INF/pages/compra.jsp" />
 	</definition>

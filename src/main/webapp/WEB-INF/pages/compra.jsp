@@ -6,13 +6,6 @@
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page import="java.util.ArrayList,java.util.List,mx.unam.posgrado.beans.*"%>
-  
-    
-    <div class="row">
-      <div class="page-header">
-        <h1>Almacenes Deportivos   <small>Comprobante de Compra de Artículos.</small></h1>
-      </div>
-    </div> <!--row header -->
     <div class="row">
     <div class="col-md-10"> 
           <div class="row">
