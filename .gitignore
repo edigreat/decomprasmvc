@@ -1,0 +1,22 @@
+#archivos class#
+*.class
+
+# Package Files #
+#*.jar
+*.war
+*.ear
+
+#Archivos mac#
+.DS_Store
+.Trashes
+
+
+/nbproject/private/
+/build/
+/dist/
+/WebApplication1/nbproject/private/
+/WebApplication1/build/
+.gradle
+/build
+.settings/
+bin/
