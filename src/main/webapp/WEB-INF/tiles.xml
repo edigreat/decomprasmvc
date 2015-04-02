@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+<tiles-definitions>
+	<definition name="base.definition"
+		template="/WEB-INF/comunes/layout.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/comunes/header.jsp" />
+		<put-attribute name="body" value="" />
+		<put-attribute name="footer" value="/WEB-INF/comunes/footer.jsp" />
+	</definition>
+	
+	<definition name="base.compra.definition"
+		template="/WEB-INF/comunes/layout_compra.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="" />
+		<put-attribute name="body" value="" />
+	</definition>
+
+	<definition name="catalogo" extends="base.definition">
+		<put-attribute name="title" value=".: Shopping Cart :." />
+		<put-attribute name="body" value="/WEB-INF/pages/listado.jsp" />
+	</definition>
+	
+		<definition name="checkout" extends="base.definition">
+		<put-attribute name="title" value=".: Check Out :." />
+		<put-attribute name="body" value="/WEB-INF/pages/checkout.jsp" />
+	</definition>
+	
+	<definition name="compra" extends="base.compra.definition">
+		<put-attribute name="title" value=".: Compra Realizada :." />
+		<put-attribute name="header" value=" GRACIAS POR TU COMPRA" />
+		
+		<put-attribute name="body" value="/WEB-INF/pages/compra.jsp" />
+	</definition>
+</tiles-definitions>
