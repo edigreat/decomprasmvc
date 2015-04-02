@@ -10,30 +10,8 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
-    <!--Parametro de la base de datos -->
-    <context-param>
-        <param-name>nombreBase</param-name>
-        <param-value>jdbc:h2:mem:test</param-value>
-    </context-param>
-       <context-param>
-        <param-name>scriptSql</param-name>
-        <param-value>script.sql</param-value>
-    </context-param>
-    <context-param>
-        <param-name>usuariodb</param-name>
-        <param-value>sa</param-value>
-    </context-param>
-    <context-param>
-        <param-name>passworddb</param-name>
-        <param-value>sa</param-value>
-    </context-param>
-    <context-param>
-        <param-name>puertodb</param-name>
-        <param-value>9123</param-value>
-    </context-param>
-  
-    
-    <!--Consola de administracion H2 -->
+   
+     <!--Consola de administracion H2 -->
     <servlet>
         <servlet-name>H2Console</servlet-name>
         <servlet-class>org.h2.server.web.WebServlet</servlet-class>
@@ -52,6 +30,7 @@
    	<listener>
 		<listener-class> org.springframework.web.context.request.RequestContextListener</listener-class>
     </listener>  
+    <!-- servlet de spring -->
     <servlet>         
    <servlet-name>spring</servlet-name>         
      	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>         
@@ -66,7 +45,7 @@
             30
         </session-timeout>
     </session-config>
-      <!-- listener para levantar la base datos -->
+      <!-- listener para manejar  la base datos , error de puerto ocupado con algunos servidores -->
     <listener>
         <listener-class>mx.unam.posgrado.servlet.BaseDatosListener</listener-class>
     </listener>
