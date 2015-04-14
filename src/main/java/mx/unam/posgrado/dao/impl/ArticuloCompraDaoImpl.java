@@ -34,6 +34,7 @@ public class ArticuloCompraDaoImpl implements ArticuloCompraDao {
     private DataSource dataSource;
 	
 	
+	
 	/* (non-Javadoc)
 	 * @see mx.unam.posgrado.dao.ArticuloCompraDao#obtenerListaArticulos()
 	 */

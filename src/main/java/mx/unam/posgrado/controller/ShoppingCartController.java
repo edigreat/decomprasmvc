@@ -104,7 +104,7 @@ public class ShoppingCartController implements Serializable {
 			BindingResult resultado) 
 	{
 		
-		
+
 		if(resultado.hasErrors()){
 			return VISTA_CATALOGO_PRODUCTO;
 		}
